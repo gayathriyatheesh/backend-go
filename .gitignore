@@ -1,0 +1,5 @@
+*.exe
+*.dll
+.env
+.DS_Store
+vendor/
