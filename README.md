@@ -134,14 +134,59 @@ DB_PORT=5432
 go run .
 ```
 
+### Day 5 - JWT Aunthenication & Register User
+
+POST /register
+
+Creates a new user account.
+
+Example Request:
+{
+"name": "John",
+"email": "[john@test.com](mailto:john@test.com)",
+"password": "password123"
+}
+
+### Login User
+
+POST /login
+
+Returns a JWT token for authenticated access.
+
+Example Request:
+{
+"email": "[john@test.com](mailto:john@test.com)",
+"password": "password123"
+}
+
+### Protected Routes
+
+The following routes require a JWT token:
+
+* GET /products
+* POST /products
+
+Include the token in the request header:
+
+Authorization: Bearer YOUR_TOKEN_HERE
+
+
 ## Learning Goals
 
-* Build backend APIs with Go
-* Learn concurrency and goroutines
-* Develop REST APIs using Gin
-* Work with PostgreSQL databases
-* Use GORM ORM effectively
-* Build production-ready backend services
+- Learn Go fundamentals and syntax
+- Understand goroutines, channels, and concurrency
+- Build REST APIs using Gin
+- Understand HTTP methods (GET, POST, PUT, DELETE)
+- Work with PostgreSQL databases
+- Use GORM for database operations (CRUD)
+- Design and use Go structs as database models
+- Understand authentication vs authorization
+- Secure passwords using bcrypt hashing
+- Implement JWT-based authentication
+- Create and validate JWT tokens
+- Protect API routes using Gin middleware
+- Build backend services following REST principles
+- Learn Git and GitHub workflow for version control
 
 ---
 
