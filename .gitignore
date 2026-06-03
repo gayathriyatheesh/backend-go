@@ -1,5 +1,6 @@
 *.exe
 *.dll
 .env
+.env.local
 .DS_Store
 vendor/
