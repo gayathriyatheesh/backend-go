@@ -1,112 +1,148 @@
-# Go Backend Learning Journey
+# Backend Go Learning Journey 🚀
 
-This repository contains my Go backend development learning journey, including Go basics, concurrency, goroutines, channels, and backend API development using the Gin framework.
+This repository contains my journey of learning backend development with Go, Gin, PostgreSQL, and GORM.
 
----
+## Week 1 Progress
 
-# Week 1
+### Day 1 - Go Basics
 
-## Day 1 — Go Basics
+* Variables, data types, functions
+* Structs and interfaces
+* Error handling
+* Packages and modules
 
-Topics covered:
-- Hello World
-- Variables
-- Arithmetic operations
-- Loops
-- Functions
-- Packages
+### Day 2 - Concurrency
 
-Programs created:
-- hello.go
-- math.go
-- loop.go
-- function.go
-- packages.go
+* Goroutines
+* WaitGroups
+* Channels
+* Concurrent programming patterns
 
----
+### Day 3 - Gin Framework & REST APIs
 
-## Day 2 — Goroutines & Concurrency
+Built my first REST API using Gin.
 
-Topics covered:
-- Goroutines
-- WaitGroups
-- Concurrent execution
-- Channels
-- Sender & Receiver pattern
-- Synchronization
+#### Features
 
-Programs created:
-- goroutines.go
-- channels.go
+* Health check endpoint
+* Product endpoints
+* JSON responses
+* Route handling
 
-Key learning:
-- Go executes goroutines concurrently
-- Channels help goroutines communicate safely
-- WaitGroups wait for all goroutines to finish
+#### Endpoints
 
----
+* `GET /health`
+* `GET /products`
+* `GET /products/:id`
+* `POST /products`
 
-## Day 3 — Gin Backend API
+### Day 4 - PostgreSQL & GORM Integration
 
-Built a backend API using Go + Gin framework.
+Connected the API to a PostgreSQL database using GORM.
 
-Topics covered:
-- HTTP methods
-- Routing
-- Handlers
-- JSON APIs
-- REST API basics
-- Models and handlers separation
-- API testing using Postman
+#### Technologies Used
 
-Project:
-- StreamCart Backend API
+* Go
+* Gin Framework
+* PostgreSQL
+* GORM ORM
 
-Endpoints:
-- GET /health
-- GET /products
-- GET /products/:id
-- POST /products
+#### Features Implemented
 
-Files:
-- main.go
-- models.go
-- handlers.go
+* PostgreSQL database setup
+* Database connection using GORM
+* AutoMigrate for automatic table creation
+* Product model persistence
+* Create products through API
+* Retrieve products from database
 
-Tech used:
-- Go
-- Gin Framework
-- Postman
-- Git & GitHub
+#### Database Models
 
----
+##### Product
 
-# Running the Project
+* ID
+* Name
+* Price
+* Category
 
-## Install Gin
+##### User
 
-```bash
-go get -u github.com/gin-gonic/gin
+* ID
+* Name
+* Email
+
+#### API Endpoints
+
+##### GET /products
+
+Returns all products stored in PostgreSQL.
+
+##### POST /products
+
+Creates a new product and saves it to PostgreSQL.
+
+Example Request:
+
+```json
+{
+  "name": "Laptop",
+  "price": 999.99,
+  "category": "electronics"
+}
 ```
 
-## Run API
+## Project Structure
+
+```text
+week1/
+├── day1-basics/
+├── day2-concurrency/
+├── day3-gin/
+└── day4-database/
+```
+
+## Setup
+
+### Clone Repository
+
+```bash
+git clone <repository-url>
+cd gayathri-backend-go
+```
+
+### Install Dependencies
+
+```bash
+go mod tidy
+```
+
+### PostgreSQL Configuration
+
+Create a `.env` file:
+
+```env
+DB_HOST=localhost
+DB_USER=postgres
+DB_PASSWORD=your_password
+DB_NAME=streamcart
+DB_PORT=5432
+```
+
+### Run Application
 
 ```bash
 go run .
 ```
 
-Server runs on:
+## Learning Goals
 
-```bash
-http://localhost:8080
-```
+* Build backend APIs with Go
+* Learn concurrency and goroutines
+* Develop REST APIs using Gin
+* Work with PostgreSQL databases
+* Use GORM ORM effectively
+* Build production-ready backend services
 
 ---
 
-# Goals
-
-- Learn backend engineering with Go
-- Build scalable APIs
-- Learn concurrency deeply
-- Prepare for real backend projects
-- Build production-level systems
+Learning backend development one day at a time. 🚀
